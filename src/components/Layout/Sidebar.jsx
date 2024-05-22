@@ -6,10 +6,10 @@ import Body from "./Sidebar/Body";
 // Mengimpor ikon dari Heroicons
 
 export default function Sidebar() {
-  const { sidebarValue, toggleSidebar } = useContext(SidebarContext);
+  const { sidebarValue } = useContext(SidebarContext);
   return (
     <div
-      className={`fixed inset-y-0 left-0 bg-gray-800 text-white w-64 transition-transform ${
+      className={`fixed inset-y-0 left-0 bg-gray-800/[.97]  sm:bg-gray-800 text-white w-64 transition-transform ${
         sidebarValue.sidebarOpen ? "translate-x-0" : "-translate-x-full"
       } z-50 `}
     >
