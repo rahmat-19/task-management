@@ -1,4 +1,4 @@
-import Layout from "../components/Layout/App";
+import LandinPageLayout from "../components/Layout/LandingPageLayout";
 
 export default function Page() {
   return (
@@ -103,5 +103,5 @@ export default function Page() {
 }
 
 Page.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+  return <LandinPageLayout>{page}</LandinPageLayout>;
 };

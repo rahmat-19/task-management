@@ -30,7 +30,6 @@ export default function Navbar() {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <ChevronDownIcon className="h-4 w-4" />
           </div>
         </div>
       </div>
