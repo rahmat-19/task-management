@@ -31,11 +31,14 @@ export default function SelectCustome({
   return (
     <div className="relative group w-full h-full">
       <button
-        onClick={() => setOpen(!open)}
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen(!open);
+        }}
         id="dropdown-button"
-        className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500"
+        className="inline-flex justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-400 rounded-md shadow-sm focus:outline-none "
       >
-        <span className="mr-2">
+        <span className="mr-2 text-gray-500 font-normal">
           {value
             ? items.find((item) => item.value == value)?.label
             : `Select ${label}`}
@@ -58,7 +61,7 @@ export default function SelectCustome({
         id="dropdown-menu"
         className={`${
           !open && `hidden`
-        } absolute right-0 mt-2 w-full h-48 overflow-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 focus:outline-none`}
+        } absolute right-0 mt-2 w-full overflow-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 focus:outline-none`}
         onKeyDown={handleKeyDown}
         tabIndex={0}
         ref={dropdownRef}

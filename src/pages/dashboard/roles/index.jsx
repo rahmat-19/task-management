@@ -23,7 +23,10 @@ export default function UsersIndex() {
     <div>
       <div className="flex items-center justify-between px-10 mb-10">
         <p className="font-bold text-xl">User Management</p>
-        <button className="border rounded-lg flex items-center  py-2 px-4 text-center align-middle font-sans text-xs font-bold  shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none bg-green-500 text-black" onClick={() => route.push('/dashboard/users/create')}>
+        <button
+          className="border rounded-lg flex items-center  py-2 px-4 text-center align-middle font-sans text-xs font-bold  shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none bg-green-500 text-black"
+          onClick={() => route.push("/dashboard/users/create")}
+        >
           <PlusIcon className="h-4" />
           Add User
         </button>

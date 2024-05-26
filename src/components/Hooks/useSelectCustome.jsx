@@ -10,7 +10,6 @@ const useSelectCustome = (items, changeSlectItem, searchAble) => {
   const dropdownRef = useRef(null);
 
   const handleKeyDown = (e) => {
-    console.log(e.key);
     if (e.key === "ArrowDown") {
       e.preventDefault();
       setHighlightedIndex((prevIndex) => (prevIndex + 1) % datas.length);
@@ -40,19 +39,19 @@ const useSelectCustome = (items, changeSlectItem, searchAble) => {
     }
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpen(false);
-        setHighlightedIndex(-1);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setOpen(false);
+  //       setHighlightedIndex(-1);
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (highlightedIndex >= 0 && highlightedIndex < datas.length) {
